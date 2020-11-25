@@ -1,0 +1,55 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Punk API and Symfony Test{% endblock %}
+
+{% block body %}
+<h1 id="punk-api-symfony-test">punk-api-symfony-test</h1>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXtZVLUmGNb_FcjwgqrZbPfTBYnehHfmZMtQ&usqp=CAU" width="200">&nbsp;&nbsp;&nbsp;<b>and</b>&nbsp;&nbsp;&nbsp;<img src="https://symfony.com/images/logos/header-logo.svg" alt="alt text" title="Logo Title Text 1"></p>
+<p>Obtiene data de cervezas a trav&eacute;s de la API Punk usando el framework Symfony para PHP.<br>
+Get beers data thru the Punk API using PHP Symfony framework.</p>
+<hr>
+<h2 id="requisitos-requirements">Requisitos / Requirements</h2>
+<ul>
+<li>PHP 7.1.0 o superior / PHP 7.1.0 or higher;</li>
+<li>y los <a href="https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html">requisitos usuales de una aplicaci&oacute;n Symfony</a> / and the <a href="https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html">usual Symfony application requirements</a>.</li>
+</ul>
+<h2 id="instalaci-oacute-n-install">Instalaci&oacute;n / Install</h2>
+<p>Clone o descargue este repositorio en su servidor.<br>
+No se requiere configuraci&oacute;n alguna para ejecutar la aplicaci&oacute;n. Si tiene
+el binario <a href="https://symfony.com/download">Symfony instalado</a>, ejecute este comando:</p>
+<p>Clone or donwload this repo on your server.<br>
+There&#39;s no need to configure anything to run the application. If you have
+<a href="https://symfony.com/download">installed Symfony</a> binary, run this commands:</p>
+<pre><code class="lang-bash"><span class="hljs-variable">$ </span>cd my_project/
+<span class="hljs-variable">$ </span>symfony serve
+</code></pre>
+<p>Luego ejecute la aplicaci&oacute;n en su navegador en la URL (<a href="https://localhost:8000">https://localhost:8000</a> por defecto).<br>
+Then access the application in your browser at the given URL (<a href="https://localhost:8000">https://localhost:8000</a> by default).</p>
+<p>Si no tiene el binario Symfony instalado, ejecute <code>php -S localhost:8000 -t public/</code>
+para usar el servidor web PHP integrado o <a href="https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html">configure un servidor web</a> como Nginx o
+Apache para ejecutar la aplicaci&oacute;n (requiere configuraci&oacute;n en archivos conf o .htaccess).<br>
+If you don&#39;t have the Symfony binary installed, run <code>php -S localhost:8000 -t public/</code>
+to use the built-in PHP web server or <a href="https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html">configure a web server</a> like Nginx or
+Apache to run the application ((requires conf or .htaccess files configuration).</p>
+<h2 id="pruebas-tests">Pruebas / Tests</h2>
+<pre><code class="lang-bash"><span class="hljs-variable">$ </span>cd my_project/
+<span class="hljs-variable">$ </span>./bin/phpunit
+</code></pre>
+<p><img src="https://drive.google.com/uc?export=view&id=12rjrrWdXVoFlWQ2ftypv-wl_5XMRGs8E" width="600" alt="PHPUnit Test"></p>
+<h2 id="endpoint-service-1">Endpoint service 1</h2>
+<p>Usando el servidor PHP integrado / Using built-in PHP web server:
+<a href="https://localhost:8000/search-by-food/{word-to-search}">https://localhost:8000/search-by-food/{word-to-search}</a><br>
+En un servidor web Nginx o Apache / On a Nginx or Apache web server:
+<a href="http://server/api_path/search-by-food/{word-to-search}">http://server/api_path/search-by-food/{word-to-search}</a></p>
+<h2 id="endpoint-service-2">Endpoint service 2</h2>
+<p>Usando el servidor PHP integrado / Using built-in PHP web server:
+<a href="https://localhost:8000/search-by-id/{id-to-search}">https://localhost:8000/search-by-id/{id-to-search}</a><br>
+En un servidor web Nginx o Apache / On a Nginx or Apache web server:
+<a href="http://server/api_path/search-by-id/{id-to-search}">http://server/api_path/search-by-id/{id-to-search}</a></p>
+<h2 id="live-demo">Live Demo</h2>
+<p><a href="http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-id/4">http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-id/4</a><br>
+<a href="http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-id/6">http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-id/6</a><br>
+<a href="http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-food/meat">http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-food/meat</a><br>
+<a href="http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-food/chicken">http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-food/chicken</a><br>
+<a href="http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-food/Spicy_chicken_tikka_masala">http://varelajp.byethost15.com/test/php/punk-api-test/public/search-by-food/Spicy_chicken_tikka_masala</a></p>
+{% endblock %}

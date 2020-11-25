@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Punk API and Symfony Test - Beers by pairing food "{{ food }}"{% endblock %}
+
+{% block body %}
+    <b>BEERS FOUND: {{ beers | length }}</b><br>
+    ------------------------------<br>
+{% for beer in beers %}
+    <b>id:           </b>{{ beer.id }}<br>
+    <b>name:         </b>{{ beer.name }}<br>
+    <b>description:  </b>{{ beer.description }}<br>
+{% for food in beer.food_pairing %}
+    <b>food_pairing: </b>{{ food }}<br>
+{% endfor %}
+    ------------------------------<br>
+{% endfor %}
+{% endblock %}

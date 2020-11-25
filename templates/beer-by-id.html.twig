@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Punk API and Symfony Test - Beer # {{ id }}{% endblock %}
+
+{% block body %}
+    <b>id:           </b>{{ beer[0].id }}<br>
+    <b>name:         </b>{{ beer[0].name }}<br>
+    <b>description:  </b>{{ beer[0].description }}<br>
+    <b>image:        </b><img src="{{ beer[0].image_url }}" width="5%" alt="beer img"><br>
+    <b>slogan:       </b>{{ beer[0].tagline }}<br>
+    <b>first_brewed: </b>{{ beer[0].first_brewed }}<br>
+{#     <b>Pairing foods: ({{ beer[0].food_pairing | length }})</b><br>
+{% for food in beer[0].food_pairing %}
+    <b>food {{ loop.index }}:           </b>{{ food }}<br>
+{% endfor %} #}
+{% endblock %}
